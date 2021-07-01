@@ -9,7 +9,7 @@ Map visualization of datacenters and drought occurrences in Western USA.
 * Python 3.8+
 * `geos` and `proj` C libraries (install via `apt`, `brew`, or another package manager for your system).
 
-Then tun the install script:
+Then run the install script:
 
 ```bash
 scripts/install
