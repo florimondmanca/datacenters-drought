@@ -1,0 +1,1 @@
+geoplot==0.4.1  # Installs cartopy

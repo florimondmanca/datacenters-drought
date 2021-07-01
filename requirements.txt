@@ -1,0 +1,22 @@
+# pre-requisites for cartopy (dependency of geoplot)
+# See: https://scitools.org.uk/cartopy/docs/latest/installing.html#installing
+# macOS issues - see: http://louistiao.me/posts/installing-cartopy-on-mac-osx-1011/
+# PROJ < 8 only - see: https://github.com/SciTools/cartopy/issues/1140
+pyshp==2.1.3
+--no-binary shapely==1.7.1
+
+# geoplot explicit dependencies
+matplotlib==3.4.2
+numpy==1.19.4
+pandas==1.2.5
+geopandas==0.9.0
+seaborn==0.11.1
+pygeos==0.10
+
+# Other
+httpx==0.18.2
+
+# Dev dependencies
+black==21.6b0
+flake8==3.9.2
+mypy==0.910
