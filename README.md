@@ -17,13 +17,13 @@ scripts/install
 
 ## Quickstart
 
-First, grab the datacenter data (too large to be stored in Git):
+First, initialize datasets:
 
 ```bash
 scripts/initdata
 ```
 
-To generate the map (output in `out/`):
+Generate the map (output in `out/`):
 
 ```bash
 scripts/main

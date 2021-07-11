@@ -1,18 +1,5 @@
-#!/usr/bin/env python
+#!/bin/sh
 
-import json
-from pathlib import Path
+BIN="venv/bin/"
 
-import httpx
-
-DATACENTERS_JSON = Path(".") / "data" / "datacenters.json"
-DATACENTERS_JSON.touch()
-
-url = "https://www.datacenters.com/api/v1/locations?query=&withProducts=false&showHidden=false&radius=0&bounds=&circleBounds=&polygonPath=&forMap=true"  # noqa
-
-response = httpx.get(url, timeout=httpx.Timeout(5, read=20))
-data = response.json()
-
-out = json.dumps(data["locations"], indent=2)
-
-DATACENTERS_JSON.write_text(out)
+${BIN}python -m dcd.datasrc
