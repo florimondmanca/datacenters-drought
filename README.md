@@ -2,6 +2,8 @@
 
 Map visualization of datacenters and drought occurrences in Western USA on June 22, 2021.
 
+_Research by [Gauthier Roussilhe](https://gauthierroussilhe.com/). Technical cartography work by B. Keller and F. Manca._
+
 ![](.github/preview.png)
 
 ## Installation
