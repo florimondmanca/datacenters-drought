@@ -1,6 +1,8 @@
 # datacenters-and-drought
 
-Map visualization of datacenters and drought occurrences in Western USA.
+Map visualization of datacenters and drought occurrences in Western USA on June 22, 2021.
+
+![](.github/preview.png)
 
 ## Installation
 
