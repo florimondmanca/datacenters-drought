@@ -70,7 +70,7 @@ def create_datacenters_west():
     # https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?West
     datacenters = get_datacenters()
     contiguous_us_west = get_contiguous_us_west()
-    datacenters_west = gpd.sjoin(datacenters, contiguous_us_west, how="inner")
+    datacenters_west = gpd.clip(datacenters, contiguous_us_west)
     _to_geojson_file(datacenters_west, "datacenters_west")
 
 
@@ -90,6 +90,17 @@ def create_drought():
 
 def get_drought():
     return _read_geojson_file("drought")
+
+
+def create_drought_us_west():
+    contiguous_us_west = get_contiguous_us_west()
+    drought = get_drought()
+    drought_us_west = gpd.clip(drought, contiguous_us_west)
+    _to_geojson_file(drought_us_west, "drought_us_west")
+
+
+def get_drought_us_west():
+    return _read_geojson_file("drought_us_west")
 
 
 def create_datacenters_d4():
@@ -125,4 +136,5 @@ if __name__ == "__main__":
     _exec(create_datacenters)
     _exec(create_datacenters_west)
     _exec(create_drought)
+    _exec(create_drought_us_west)
     _exec(create_datacenters_d4, fmt="csv")

@@ -18,16 +18,16 @@ ax = gplt.polyplot(
 )
 
 # 3) Overlay drought data.
-drought = datasrc.get_drought()
+drought_us_west = datasrc.get_drought_us_west()
 
 # Draw drought areas colored by drought intensity.
 # See: https://residentmario.github.io/geoplot/plot_references/plot_reference.html#choropleth
 gplt.choropleth(
-    drought,
+    drought_us_west,
     hue="DM",
     cmap="YlOrRd",  # Light yellow to dark red
     legend=True,
-    scheme=mc.FisherJenks(drought["DM"], k=5),  # 5-category legend
+    scheme=mc.FisherJenks(drought_us_west["DM"], k=5),  # 5-category legend
     legend_kwargs={"bbox_to_anchor": (1, 0.35)},
     legend_labels=[
         "D0 (Abnormally Dry)",
