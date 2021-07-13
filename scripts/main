@@ -3,3 +3,4 @@
 BIN="venv/bin/"
 
 ${BIN}python -m dcd.mapgen
+${BIN}python -m dcd.mapdyn

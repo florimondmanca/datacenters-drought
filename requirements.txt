@@ -14,6 +14,7 @@ seaborn==0.11.1
 rtree==0.9.7
 
 # Other
+folium==0.12.1
 rich==10.5.0
 httpx==0.18.2
 
